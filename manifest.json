@@ -5,14 +5,23 @@
     "manifest_version": 3,
     "homepage_url": "https://github.com/anthonyjdella/inline-google-search",
     "default_locale": "en",
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "Inline Google Search \n\nHighlight text to use!"
-    },
     "icons": {
         "16": "/images/get_started16.png",
         "32": "/images/get_started32.png",
         "48": "/images/get_started48.png",
         "128": "/images/get_started128.png"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+U",
+                "mac": "Command+U"
+            },
+            "description": "Shortcut to open Inline Google Search"
+        }
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Inline Google Search \n\nHighlight text to use!"
     }
 }
