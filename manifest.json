@@ -20,8 +20,14 @@
             "description": "Shortcut to open Inline Google Search"
         }
     },
+    "permissions": [
+        "contextMenus"
+    ],
     "action": {
         "default_popup": "index.html",
         "default_title": "Inline Google Search \n\nHighlight text to use!"
+    },
+    "background": {
+        "service_worker": "script.js"
     }
 }
