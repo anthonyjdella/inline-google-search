@@ -2,6 +2,7 @@
     "name": "Inline Google Search",
     "description": "Highlight text and see Google Search results without having to switch tabs.",
     "version": "0.0.1",
+    "author": "Anthony Dellavecchia",
     "manifest_version": 3,
     "homepage_url": "https://github.com/anthonyjdella/inline-google-search",
     "default_locale": "en",
@@ -23,11 +24,15 @@
     "permissions": [
         "contextMenus"
     ],
-    "action": {
-        "default_popup": "index.html",
-        "default_title": "Inline Google Search \n\nHighlight text to use!"
+    "options_ui": {
+        "page": "/options/options.html",
+        "open_in_tab": false
     },
     "background": {
         "service_worker": "script.js"
+    },
+    "action": {
+        "default_popup": "/popup/popup.html",
+        "default_title": "Inline Google Search \n\nHighlight text to use!"
     }
 }
