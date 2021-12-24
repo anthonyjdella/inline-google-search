@@ -12,27 +12,44 @@
         "48": "/images/get_started48.png",
         "128": "/images/get_started128.png"
     },
+    "action": {
+        "default_popup": "/popup/popup.html",
+        "default_title": "Inline Google Search \n\nHighlight text to use!"
+    },
     "commands": {
         "_execute_action": {
             "suggested_key": {
                 "default": "Ctrl+U",
-                "mac": "Command+U"
+                "mac": "Ctrl+U"
             },
             "description": "Shortcut to open Inline Google Search"
         }
     },
     "permissions": [
-        "contextMenus"
+        "contextMenus",
+        "storage",
+        "activeTab",
+        "scripting"
     ],
     "options_ui": {
         "page": "/options/options.html",
         "open_in_tab": false
     },
     "background": {
-        "service_worker": "script.js"
+        "service_worker": "background.js"
     },
-    "action": {
-        "default_popup": "/popup/popup.html",
-        "default_title": "Inline Google Search \n\nHighlight text to use!"
-    }
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": ["<all_urls>"],
+            "js": ["/popup/popup.js"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["/popup/popup.html"],
+            "matches": ["<all_urls>"],
+            "extension_ids": ["djcgjbpoapahbnjdkepflmlonemomhek"]
+        }
+    ]
 }
