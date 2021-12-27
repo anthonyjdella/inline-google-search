@@ -1,12 +1,3 @@
-#title {
-    padding: 2em 2em;
-    border-bottom: 1px solid #eee;
-    margin: 0;
-    width: 100%;
-    background-size: cover;
-    width: 20em;
-}
-
 body,
 html {
     padding: 0;
@@ -33,6 +24,20 @@ ul li:hover {
 
 ul li span {
     vertical-align: middle;
+}
+
+#title {
+    padding: 2em 2em;
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    width: 100%;
+    background-size: cover;
+    width: 20em;
+}
+
+#history {
+    border-bottom: 1px solid #eee;
+    padding: 1em;
 }
 
 #title span {
