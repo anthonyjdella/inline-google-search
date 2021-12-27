@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
+    console.log("dom loaded")
+
     document.getElementById("settings").addEventListener("click", function () {
         if (chrome.runtime.openOptionsPage) {
             chrome.runtime.openOptionsPage();
@@ -32,9 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         this.parentNode.style.opacity = 0;
     });
 
-
     // TESTING 
     chrome.runtime.sendMessage("pageActionClicked");
     console.log('message sent');
-
 });

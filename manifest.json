@@ -16,6 +16,10 @@
         "default_popup": "/popup/popup.html",
         "default_title": "Inline Google Search \n\nHighlight text to use!"
     },
+    "options_ui": {
+        "page": "/options/options.html",
+        "open_in_tab": false
+    },
     "commands": {
         "_execute_action": {
             "suggested_key": {
@@ -31,10 +35,6 @@
         "activeTab",
         "scripting"
     ],
-    "options_ui": {
-        "page": "/options/options.html",
-        "open_in_tab": false
-    },
     "background": {
         "service_worker": "background.js"
     },
@@ -42,14 +42,7 @@
         {
             "all_frames": true,
             "matches": ["<all_urls>"],
-            "js": ["/popup/popup.js"]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": ["/popup/popup.html"],
-            "matches": ["<all_urls>"],
-            "extension_ids": ["djcgjbpoapahbnjdkepflmlonemomhek"]
+            "js": ["./side-panel.js"]
         }
     ]
 }
